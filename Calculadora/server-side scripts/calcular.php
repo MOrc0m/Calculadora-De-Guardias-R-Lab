@@ -37,7 +37,7 @@
         $total = $horapa + $horaa + $horanoa;
         $total =number_format($total, 2, ',', '.'); 
         echo  "$" . htmlspecialchars($total);
-    } else {  echo '<script language="javascript">alert("cantidad de horas extra no valida");</script>';     
+    } else {  echo '<script language="javascript">alert("cantidad de horas extra no valida")</script>';     
     }   
   ?>
 <p>#~/</p>  
