@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>Calculadora de guardias</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Calculadora pago horas extra">
+    <meta name="description" content="Calcula el abono de tus guardias y horas extra">  
+    <style>
+      .textfot {
+         text-align: center;
+      }
+        nav .nav-link:hover {
+    /* background: #aeaeae;
+  border-bottom: #005231 solid 1px;*/
+    background-color: #198754 ;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: bold;
+  }
+  nav .nav-link {
+    /* background: #aeaeae;
+  border-bottom: #005231 solid 1px;*/
+    background-color: #fff;
+    color: #198754;
+    font-size: 1.2em;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: bold;
+  }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">   
+    <link rel="shortcut icon" href="images/favicon.jpg">   
+  </head>  
+  <body>   
+    <div class="container-fluid main">    
+    <header class="col-12 col-lg-6">
+     <div class="row">
+      <a href="https://rlab.be/" class="text-dark text-decoration-none">
+        <img src="images/logo-rlab-negro.svg" style="padding: 5px;" width="128" class="col-lg"> <span class="col-lg" style="font-size: 3rem;"> RLab  </span>
+      </a>
+    </div>
+
+    </header>
+    <nav class="nav  nav-pills justify-content-end" id="menu">      
+               <a href="/" class="nav-link">Inicio</a>
+               <a href="https://manifiesto.rlab.be/" class="nav-link" target="_blank">Manifiesto</a>
+               <a href="https://rlab.be/codigos/" class="nav-link" target="_blank" >Códigos</a>
+               <a href="https://rlab.be/wiki/" class="nav-link" target="_blank">Wiki</a></li>
+               <a href="https://rlab.be/donaciones/" class="nav-link" target="_blank">Donaciones</a></li>
+               <a href="https://rlab.be/como-llegar/" class="nav-link" target="_blank">Dónde</a></li>
+              <a href="https://rlab.be/contacto/" class="nav-link" target="_blank">Contacto</a></li>
+    </nav>  
+    <hr class="rounded bg-success" style="opacity: 1;  height: 3px">   
+    <p>#~</p>  
+   <h1><b>Calculadora de Guardias:</b></h1>
+   <br>
+    <form action="/scripts/calcular.php" method="post">
+      <div class="mb-3 form-floating">       
+      <input type="number" id="Sueldo" name="Sueldo" class="form-control" placeholder="Sueldo Base:">
+      <label for="Sueldo" class="form-label" >Sueldo Base:</label>
+      <br>
+     </div>
+     <div class="mb-3 form-floating">
+     <input type="number" id="Guardias pasivas" name="Guardiasp" class="form-control" placeholder="Tiempo de guardia pasiva mensual:">
+     <label for="Guardiasp" class="form-label">Tiempo de guardia pasiva mensual:</label>
+    </div>
+     <br>
+
+     <label for="Guardiasab">Tiempo de guardia trabajado en día hábil:</label>
+     <br>
+     <select name="Guardiasab" id="Guardiasab" class="form-select mb-3">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+      <option value="26">26</option>
+      <option value="27">27</option>
+      <option value="28">28</option>
+      <option value="29">29</option>
+      <option value="30">30</option>
+    </select>
+    <br>
+    <label for="Guardiasnoab">Tiempo de guardia trabajado en día no hábil:</label>
+    <br>
+    <select name="Guardiasnoab" id="Guardiasnoab" class="form-select mb-3">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+     <option value="6">6</option>
+     <option value="7">7</option>
+     <option value="8">8</option>
+     <option value="9">9</option>
+     <option value="10">10</option>
+     <option value="11">11</option>
+     <option value="12">12</option>
+     <option value="13">13</option>
+     <option value="14">14</option>
+     <option value="15">15</option>
+     <option value="16">16</option>
+     <option value="17">17</option>
+     <option value="18">18</option>
+     <option value="19">19</option>
+     <option value="20">20</option>
+     <option value="21">21</option>
+     <option value="22">22</option>
+     <option value="23">23</option>
+     <option value="24">24</option>
+     <option value="25">25</option>
+     <option value="26">26</option>
+     <option value="27">27</option>
+     <option value="28">28</option>
+     <option value="29">29</option>
+     <option value="30">30</option>
+   </select>
+   <br>
+   <button type="submit" id="boton" class="btn-success rounded">Enviar</button>
+    </form>
+    <br>
+    <br>
+    <div><h2><b>El monto a cobrar por sus guardias es: <span id="resultados"></span></b></h2></div>
+
+    <p>#~/</p>
+    <footer class="bg-success text-white d-flex justify-content-md-center fixed-bottom">
+      <div class="row">
+      <p id="pie" class="">Calculadora actualizada <a class="text-white text-decoration-none" href="https://unioninformatica.org/institucional/convenio-colectivo-de-trabajo/">según el convenio colectivo</a> y <a class="text-white text-decoration-none" href="http://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/63368/texact.htm">la Ley 11.544 </a> de la República Argentina al 27/09/2021.</p>
+      <div class="wd-100">
+      <div class="justify-content-md-center">
+      <p id="pie" class="textfot"> By: <a class="text-white text-decoration-none" href="https://github.com/MOrc0m">M0rc0m</a></p>
+    </div>  
+    </div>
+    </footer>
+</div> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+  <script src="/scripts/funciones.js"></script>
+  </body>       
+  </html>
