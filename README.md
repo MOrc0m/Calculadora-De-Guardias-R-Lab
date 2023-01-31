@@ -7,7 +7,7 @@ Pagina web que calcula el sueldo a recibir por las guardias realizadas, desarrol
 
 ## Eng
 
-Web page that tells the user the amount to be paid for on call time service, developed for [R'lyeh Hacklab](https://rlab.be/) and [Union Informatica](https://unioninformatica.org/), using [Bootstrap](https://getbootstrap.com/) & [Jquery](https://jquery.com/). The favicon and logo used are R'lyeh Hacklab property.
+Web page that tells the user the amount to be paid for on call time service, developed for [R'lyeh Hacklab](https://rlab.be/) and [Union Informatica](https://unioninformatica.org/), using [Bootstrap](https://getbootstrap.com/), [Jquery](https://jquery.com/) &  [PHP](https://www.php.net/get-involved). The favicon and logo used are R'lyeh Hacklab property.
 
 
 # URL:
